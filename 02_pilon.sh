@@ -24,7 +24,7 @@ fi
 mkdir -p $OUTDIR
 
 IFS=,
-tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ   #显示样本里末尾n行的内容，只显示第N行内容，读取文件
+tail -n +2 $SAMPLES | sed -n ${N}p | while read BASE SPECIES STRAIN NANOPORE ILLUMINA SUBPHYLUM PHYLUM LOCUS RNASEQ   #sed -n p只展示第N行，显示样本里末尾n行的内容，只显示第N行内容，读取文件
 do
     for type in canu flye                                                 #将 canu flye的值依次赋值给 type
     do
